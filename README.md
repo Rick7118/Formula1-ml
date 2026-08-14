@@ -38,13 +38,7 @@ The application presents the analysis as a sequence of sections, moving from raw
 
 ## Preview
 
-### Hero
 
-
-
-<p align="center">
-  <img src="docs/hero.png" alt="Formula1-ML hero section" width="100%">
-</p>
 
 
 
