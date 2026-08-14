@@ -159,6 +159,7 @@ export default function LapSection() {
         x: trace.x,
         y: trace.y,
         customdata: trace.customdata,
+
         marker: {
           size: 6,
           opacity:
@@ -166,16 +167,21 @@ export default function LapSection() {
               ? 0.55
               : 0.8,
         },
+
         hovertemplate:
-          "<b>%{customdata[0]}</b>" +
-          "<br>%{customdata[1]}" +
+          "<b>%{customdata[0]}</b>  ·  %{customdata[1]}" +
           "<br><br>" +
-          "Lap Time: %{y:.3f}s" +
-          "<br>Tyre: %{customdata[2]}" +
-          "<br>Tyre Life: %{customdata[3]}" +
-          "<br>S1: %{customdata[4]}" +
-          "<br>S2: %{customdata[5]}" +
-          "<br>S3: %{customdata[6]}" +
+          "<b>LAP TIME</b>    %{y:.3f}s" +
+          "<br>" +
+          "<b>TYRE</b>       %{customdata[2]}" +
+          "<br>" +
+          "<b>TYRE LIFE</b>  %{customdata[3]}" +
+          "<br><br>" +
+          "<b>S1</b>          %{customdata[4]}s" +
+          "<br>" +
+          "<b>S2</b>          %{customdata[5]}s" +
+          "<br>" +
+          "<b>S3</b>          %{customdata[6]}s" +
           "<extra></extra>",
       })
     );
@@ -197,8 +203,10 @@ export default function LapSection() {
     return {
       type: "scatter" as const,
       mode: "markers" as const,
+
       x: [fastestIndex + 1],
       y: [fastestLap.lapTime],
+
       marker: {
         size: 14,
         symbol: "circle-open",
@@ -206,11 +214,15 @@ export default function LapSection() {
           width: 2,
         },
       },
+
       name: "Fastest lap",
+
       hovertemplate:
         "<b>FASTEST LAP</b>" +
-        "<br>%{y:.3f}s" +
+        "<br><br>" +
+        "<b>%{y:.3f}s</b>" +
         "<extra></extra>",
+
       showlegend: false,
     };
   }, [fastestLap, filteredLaps]);
@@ -315,22 +327,27 @@ export default function LapSection() {
               layout={{
                 autosize: true,
                 height: 520,
+
                 paper_bgcolor: "transparent",
                 plot_bgcolor: "transparent",
+
                 margin: {
                   l: 65,
                   r: 30,
                   t: 35,
                   b: 60,
                 },
+
                 font: {
                   family:
                     "Geist Mono, monospace",
                   size: 10,
                   color: "#888888",
                 },
+
                 showlegend:
                   selectedDriver === "ALL",
+
                 legend: {
                   orientation: "h",
                   x: 0,
@@ -339,6 +356,7 @@ export default function LapSection() {
                     size: 9,
                   },
                 },
+
                 xaxis: {
                   title: {
                     text: "LAP INDEX",
@@ -346,13 +364,16 @@ export default function LapSection() {
                       size: 9,
                     },
                   },
+
                   showgrid: false,
                   zeroline: false,
                   linecolor: "#292929",
+
                   tickfont: {
                     size: 9,
                   },
                 },
+
                 yaxis: {
                   title: {
                     text: "LAP TIME (SECONDS)",
@@ -360,23 +381,41 @@ export default function LapSection() {
                       size: 9,
                     },
                   },
+
                   showgrid: true,
                   gridcolor: "#202020",
                   zeroline: false,
                   linecolor: "#292929",
+
                   tickfont: {
                     size: 9,
                   },
                 },
+
+                /*
+                 * Custom Plotly hover styling.
+                 *
+                 * The previous tooltip was technically correct,
+                 * but too small and too low-contrast against the
+                 * visualization. This makes the telemetry readable
+                 * without changing the chart itself.
+                 */
                 hoverlabel: {
-                  bgcolor: "#111111",
-                  bordercolor: "#292929",
+                  bgcolor: "#171717",
+                  bordercolor: "#e10600",
+                  align: "left",
+
                   font: {
                     family:
                       "Geist Mono, monospace",
-                    size: 10,
+                    size: 12,
+                    color: "#f2f2f0",
                   },
+
+                  namelength: -1,
                 },
+
+                hovermode: "closest",
               }}
               config={{
                 responsive: true,

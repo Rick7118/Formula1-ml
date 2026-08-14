@@ -49,8 +49,11 @@ const FEATURE_LABELS: Record<string, string> = {
 };
 
 export default function ModelSection() {
-  const [data, setData] = useState<ModelData | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [data, setData] =
+    useState<ModelData | null>(null);
+
+  const [loading, setLoading] =
+    useState(true);
 
   useEffect(() => {
     async function loadModelData() {
@@ -93,7 +96,8 @@ export default function ModelSection() {
           predictions:
             Array.isArray(predictions)
               ? predictions
-              : predictions?.predictions ?? [],
+              : predictions?.predictions ??
+                [],
         });
       } catch (error) {
         console.error(
@@ -192,9 +196,12 @@ export default function ModelSection() {
             "number"
       )
       .map((prediction) => ({
-        actual: prediction.actual as number,
+        actual:
+          prediction.actual as number,
+
         predicted:
           prediction.predicted as number,
+
         error:
           prediction.error ??
           (prediction.predicted as number) -
@@ -220,9 +227,7 @@ export default function ModelSection() {
     >
       <div className="mx-auto max-w-[1600px] px-6 py-32 md:px-10 md:py-40 lg:px-16">
 
-        {/* ============================================================
-            HEADER
-        ============================================================ */}
+        {/* HEADER */}
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
           <div className="lg:col-span-3">
@@ -254,9 +259,7 @@ export default function ModelSection() {
           </div>
         </div>
 
-        {/* ============================================================
-            MODEL IDENTITY
-        ============================================================ */}
+        {/* MODEL IDENTITY */}
 
         <div className="mt-24 grid grid-cols-1 border-y border-[var(--border)] md:grid-cols-3">
           <ModelIdentity
@@ -278,9 +281,7 @@ export default function ModelSection() {
           />
         </div>
 
-        {/* ============================================================
-            MODEL PERFORMANCE
-        ============================================================ */}
+        {/* MODEL PERFORMANCE */}
 
         <div className="mt-24">
           <div className="flex items-center gap-4">
@@ -352,9 +353,7 @@ export default function ModelSection() {
           </div>
         </div>
 
-        {/* ============================================================
-            FEATURE IMPORTANCE
-        ============================================================ */}
+        {/* FEATURE IMPORTANCE */}
 
         <div className="mt-32 grid grid-cols-1 gap-16 lg:grid-cols-12">
           <div className="lg:col-span-4">
@@ -471,9 +470,7 @@ export default function ModelSection() {
           </div>
         </div>
 
-        {/* ============================================================
-            PREDICTIONS
-        ============================================================ */}
+        {/* PREDICTIONS */}
 
         <div className="mt-32">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
@@ -514,9 +511,7 @@ export default function ModelSection() {
           </div>
         </div>
 
-        {/* ============================================================
-            PIPELINE
-        ============================================================ */}
+        {/* PIPELINE */}
 
         <div className="mt-32">
           <div className="flex items-center gap-4">
@@ -554,9 +549,7 @@ export default function ModelSection() {
           </div>
         </div>
 
-        {/* ============================================================
-            CONCLUSION
-        ============================================================ */}
+        {/* CONCLUSION */}
 
         <div className="mt-32">
           <div className="max-w-5xl">
@@ -580,9 +573,7 @@ export default function ModelSection() {
           </div>
         </div>
 
-        {/* ============================================================
-            NEXT
-        ============================================================ */}
+        {/* NEXT */}
 
         <div className="mt-32 flex items-center gap-4">
           <div className="h-px w-10 bg-[var(--accent)]" />
@@ -696,6 +687,9 @@ function PredictionChart({
   }[];
   loading: boolean;
 }) {
+  const [hoveredIndex, setHoveredIndex] =
+    useState<number | null>(null);
+
   if (loading) {
     return (
       <div className="flex min-h-[420px] items-center justify-center border border-[var(--border)] bg-[var(--surface)]">
@@ -731,23 +725,47 @@ function PredictionChart({
       ? 1
       : max - min;
 
+  const getPointPosition = (
+    prediction: {
+      actual: number;
+      predicted: number;
+    }
+  ) => {
+    const x =
+      40 +
+      ((prediction.actual - min) /
+        range) *
+        520;
+
+    const y =
+      360 -
+      ((prediction.predicted - min) /
+        range) *
+        300;
+
+    return { x, y };
+  };
+
   const points = predictions
     .map((prediction) => {
-      const x =
-        40 +
-        ((prediction.actual - min) /
-          range) *
-          520;
-
-      const y =
-        360 -
-        ((prediction.predicted - min) /
-          range) *
-          300;
+      const { x, y } =
+        getPointPosition(prediction);
 
       return `${x},${y}`;
     })
     .join(" ");
+
+  const hoveredPrediction =
+    hoveredIndex !== null
+      ? predictions[hoveredIndex]
+      : null;
+
+  const hoveredPosition =
+    hoveredPrediction
+      ? getPointPosition(
+          hoveredPrediction
+        )
+      : null;
 
   return (
     <div className="border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8">
@@ -769,7 +787,7 @@ function PredictionChart({
         </div>
       </div>
 
-      <div className="mt-8 overflow-hidden">
+      <div className="relative mt-8 overflow-visible">
         <svg
           viewBox="0 0 600 420"
           className="h-auto w-full"
@@ -820,28 +838,75 @@ function PredictionChart({
 
           {predictions.map(
             (prediction, index) => {
-              const x =
-                40 +
-                ((prediction.actual - min) /
-                  range) *
-                  520;
+              const { x, y } =
+                getPointPosition(
+                  prediction
+                );
 
-              const y =
-                360 -
-                ((prediction.predicted -
-                  min) /
-                  range) *
-                  300;
+              const isHovered =
+                hoveredIndex === index;
 
               return (
-                <circle
+                <g
                   key={`prediction-${index}`}
-                  cx={x}
-                  cy={y}
-                  r="3"
-                  fill="var(--accent)"
-                  opacity="0.75"
-                />
+                  onMouseEnter={() =>
+                    setHoveredIndex(index)
+                  }
+                  onMouseLeave={() =>
+                    setHoveredIndex(null)
+                  }
+                  onFocus={() =>
+                    setHoveredIndex(index)
+                  }
+                  onBlur={() =>
+                    setHoveredIndex(null)
+                  }
+                  tabIndex={0}
+                  role="button"
+                  aria-label={`Prediction ${index + 1}: actual ${prediction.actual.toFixed(
+                    3
+                  )} seconds, predicted ${prediction.predicted.toFixed(
+                    3
+                  )} seconds`}
+                  className="cursor-pointer outline-none"
+                >
+                  {/* Larger invisible hit target */}
+
+                  <circle
+                    cx={x}
+                    cy={y}
+                    r="9"
+                    fill="transparent"
+                  />
+
+                  {/* Visible point */}
+
+                  <circle
+                    cx={x}
+                    cy={y}
+                    r={isHovered ? 5 : 3}
+                    fill="var(--accent)"
+                    opacity={
+                      isHovered
+                        ? 1
+                        : 0.75
+                    }
+                  />
+
+                  {/* Hover ring */}
+
+                  {isHovered && (
+                    <circle
+                      cx={x}
+                      cy={y}
+                      r="8"
+                      fill="none"
+                      stroke="var(--accent)"
+                      strokeWidth="1"
+                      opacity="0.6"
+                    />
+                  )}
+                </g>
               );
             }
           )}
@@ -869,6 +934,63 @@ function PredictionChart({
             PREDICTED LAP TIME
           </text>
         </svg>
+
+        {/* Custom prediction tooltip */}
+
+        {hoveredPrediction &&
+          hoveredPosition && (
+            <div
+              className="pointer-events-none absolute z-20 w-[210px] -translate-y-full rounded-sm border border-[var(--accent)] bg-[var(--surface-elevated)] px-4 py-4 shadow-2xl"
+              style={{
+                left: `${(
+                  hoveredPosition.x /
+                  600
+                ) * 100}%`,
+                top: `${(
+                  hoveredPosition.y /
+                  420
+                ) * 100}%`,
+                transform:
+                  hoveredPosition.x >
+                  420
+                    ? "translate(-100%, -105%)"
+                    : "translate(-8%, -105%)",
+              }}
+            >
+              <div className="font-mono text-[8px] uppercase tracking-[0.2em] text-[var(--accent)]">
+                Prediction #
+                {String(
+                  hoveredIndex! + 1
+                ).padStart(2, "0")}
+              </div>
+
+              <div className="mt-3 space-y-2">
+                <TooltipRow
+                  label="ACTUAL"
+                  value={`${hoveredPrediction.actual.toFixed(
+                    3
+                  )} S`}
+                />
+
+                <TooltipRow
+                  label="PREDICTED"
+                  value={`${hoveredPrediction.predicted.toFixed(
+                    3
+                  )} S`}
+                />
+
+                <div className="my-2 h-px bg-[var(--border)]" />
+
+                <TooltipRow
+                  label="ERROR"
+                  value={`${hoveredPrediction.error >= 0 ? "+" : ""}${hoveredPrediction.error.toFixed(
+                    3
+                  )} S`}
+                  accent
+                />
+              </div>
+            </div>
+          )}
       </div>
 
       <div className="mt-4 flex justify-between font-mono text-[8px] uppercase tracking-[0.15em] text-[var(--muted)]">
@@ -880,6 +1002,34 @@ function PredictionChart({
           WITH SECTOR FEATURES
         </span>
       </div>
+    </div>
+  );
+}
+
+function TooltipRow({
+  label,
+  value,
+  accent = false,
+}: {
+  label: string;
+  value: string;
+  accent?: boolean;
+}) {
+  return (
+    <div className="flex items-center justify-between gap-4">
+      <span className="font-mono text-[8px] tracking-[0.15em] text-[var(--muted)]">
+        {label}
+      </span>
+
+      <span
+        className={`font-mono text-[11px] tracking-[0.05em] ${
+          accent
+            ? "text-[var(--accent)]"
+            : "text-[var(--foreground)]"
+        }`}
+      >
+        {value}
+      </span>
     </div>
   );
 }

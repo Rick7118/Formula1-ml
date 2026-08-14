@@ -218,11 +218,15 @@ export default function TyreSection() {
 
         hovertemplate:
           "<b>%{customdata[0]}</b>" +
-          "<br>%{customdata[1]}" +
+          "  ·  %{customdata[1]}" +
           "<br><br>" +
-          "Tyre life: %{x}" +
-          "<br>Δ lap: %{y:.3f}s" +
-          "<br>Lap time: %{customdata[3]:.3f}s" +
+          "<b>TYRE</b>        %{customdata[2]}" +
+          "<br>" +
+          "<b>TYRE LIFE</b>   %{x} LAPS" +
+          "<br><br>" +
+          "<b>Δ LAP</b>       %{y:.3f} S" +
+          "<br>" +
+          "<b>LAP TIME</b>    %{customdata[3]:.3f} S" +
           "<extra></extra>",
 
         showlegend: false,
@@ -231,69 +235,87 @@ export default function TyreSection() {
   }, [filteredPoints]);
 
   const trendLines = useMemo(() => {
-    return filteredTrends.map(
-      (trend) => {
-        const relevantPoints =
-          filteredPoints.filter(
-            (point) =>
-              point.circuit ===
-              trend.circuit
-          );
+    return filteredTrends
+      .map(
+        (trend) => {
+          const relevantPoints =
+            filteredPoints.filter(
+              (point) =>
+                point.circuit ===
+                trend.circuit
+            );
 
-        if (!relevantPoints.length) {
-          return null;
+          if (!relevantPoints.length) {
+            return null;
+          }
+
+          const maxTyreLife =
+            Math.max(
+              ...relevantPoints.map(
+                (point) =>
+                  point.tyreLife
+              )
+            );
+
+          const minTyreLife =
+            Math.min(
+              ...relevantPoints.map(
+                (point) =>
+                  point.tyreLife
+              )
+            );
+
+          return {
+            type: "scatter" as const,
+            mode: "lines" as const,
+
+            x: [
+              minTyreLife,
+              maxTyreLife,
+            ],
+
+            y: [
+              trend.slopeSecondsPerLap *
+                  minTyreLife +
+                trend.intercept,
+
+              trend.slopeSecondsPerLap *
+                  maxTyreLife +
+                trend.intercept,
+            ],
+
+            name: trend.circuit,
+
+            line: {
+              width: 2,
+            },
+
+            customdata: [
+              [
+                trend.circuit,
+                trend.slopeSecondsPerLap,
+                trend.points,
+              ],
+              [
+                trend.circuit,
+                trend.slopeSecondsPerLap,
+                trend.points,
+              ],
+            ],
+
+            hovertemplate:
+              "<b>%{customdata[0]}</b>" +
+              "<br><br>" +
+              "<b>DEGRADATION</b>" +
+              "  +%{customdata[1]:.4f} S / LAP" +
+              "<br>" +
+              "<b>DATA POINTS</b>" +
+              "  %{customdata[2]}" +
+              "<extra></extra>",
+          };
         }
-
-        const maxTyreLife =
-          Math.max(
-            ...relevantPoints.map(
-              (point) =>
-                point.tyreLife
-            )
-          );
-
-        const minTyreLife =
-          Math.min(
-            ...relevantPoints.map(
-              (point) =>
-                point.tyreLife
-            )
-          );
-
-        return {
-          type: "scatter" as const,
-          mode: "lines" as const,
-
-          x: [
-            minTyreLife,
-            maxTyreLife,
-          ],
-
-          y: [
-            trend.slopeSecondsPerLap *
-                minTyreLife +
-              trend.intercept,
-            trend.slopeSecondsPerLap *
-                maxTyreLife +
-              trend.intercept,
-          ],
-
-          name: trend.circuit,
-
-          line: {
-            width: 2,
-          },
-
-          hovertemplate:
-            `<b>${trend.circuit}</b>` +
-            "<br>" +
-            `+${trend.slopeSecondsPerLap.toFixed(
-              4
-            )}s / lap` +
-            "<extra></extra>",
-        };
-      }
-    ).filter(Boolean);
+      )
+      .filter(Boolean);
   }, [
     filteredTrends,
     filteredPoints,
@@ -508,17 +530,29 @@ export default function TyreSection() {
                   },
                 },
 
+                /*
+                 * Standardized F1-ML hover treatment.
+                 *
+                 * The chart itself is unchanged.
+                 * This only improves the readability of
+                 * the data-point and trend-line popups.
+                 */
                 hoverlabel: {
-                  bgcolor: "#111111",
-                  bordercolor:
-                    "#292929",
+                  bgcolor: "#171717",
+                  bordercolor: "#e10600",
+                  align: "left",
 
                   font: {
                     family:
                       "Geist Mono, monospace",
-                    size: 10,
+                    size: 12,
+                    color: "#f2f2f0",
                   },
+
+                  namelength: -1,
                 },
+
+                hovermode: "closest",
               }}
               config={{
                 responsive: true,

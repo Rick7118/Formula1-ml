@@ -216,6 +216,7 @@ export default function RacePaceSection() {
         return {
           type: "scatter" as const,
           mode: "lines+markers" as const,
+
           name:
             DRIVER_NAMES[driverCode] ??
             driverCode,
@@ -243,17 +244,20 @@ export default function RacePaceSection() {
           },
 
           marker: {
-            size: 4,
+            size: 5,
           },
 
           hovertemplate:
             "<b>%{customdata[0]}</b>" +
-            "<br>%{customdata[1]}" +
-            "<br>%{customdata[2]}" +
+            "  ·  %{customdata[1]}" +
             "<br><br>" +
-            "Tyre life: %{x}" +
-            "<br>Δ pace: %{y:.3f}s" +
-            "<br>Lap time: %{customdata[3]:.3f}s" +
+            "<b>TYRE</b>        %{customdata[2]}" +
+            "<br>" +
+            "<b>TYRE LIFE</b>   %{x} LAPS" +
+            "<br><br>" +
+            "<b>Δ PACE</b>      %{y:.3f} S" +
+            "<br>" +
+            "<b>LAP TIME</b>    %{customdata[3]:.3f} S" +
             "<extra></extra>",
         };
       }
@@ -385,8 +389,7 @@ export default function RacePaceSection() {
 
                 xaxis: {
                   title: {
-                    text:
-                      "TYRE LIFE (LAPS)",
+                    text: "TYRE LIFE (LAPS)",
                     font: {
                       size: 9,
                     },
@@ -404,8 +407,7 @@ export default function RacePaceSection() {
 
                 yaxis: {
                   title: {
-                    text:
-                      "NORMALIZED PACE (SECONDS)",
+                    text: "NORMALIZED PACE (SECONDS)",
                     font: {
                       size: 9,
                     },
@@ -426,21 +428,34 @@ export default function RacePaceSection() {
                   orientation: "h",
                   y: -0.15,
                   x: 0,
+
                   font: {
                     size: 9,
                   },
                 },
 
+                /*
+                 * Global hover styling.
+                 *
+                 * The chart itself remains unchanged.
+                 * This only controls the data-point popup.
+                 */
                 hoverlabel: {
-                  bgcolor: "#111111",
-                  bordercolor: "#292929",
+                  bgcolor: "#171717",
+                  bordercolor: "#e10600",
+                  align: "left",
 
                   font: {
                     family:
                       "Geist Mono, monospace",
-                    size: 10,
+                    size: 12,
+                    color: "#f2f2f0",
                   },
+
+                  namelength: -1,
                 },
+
+                hovermode: "closest",
               }}
               config={{
                 responsive: true,

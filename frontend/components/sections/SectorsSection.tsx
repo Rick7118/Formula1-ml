@@ -143,11 +143,13 @@ export default function SectorsSection() {
 
         hovertemplate:
           "<b>%{customdata[0]}</b>" +
-          "<br>%{customdata[1]}" +
+          "  ·  %{customdata[1]}" +
           "<br><br>" +
-          "%{customdata[2]:.3f}s" +
-          "<br>Total lap: %{customdata[3]:.3f}s" +
-          "<br>Tyre: %{customdata[4]}" +
+          "<b>SECTOR</b>      %{customdata[2]:.3f} S" +
+          "<br>" +
+          "<b>TOTAL LAP</b>   %{customdata[3]:.3f} S" +
+          "<br>" +
+          "<b>TYRE</b>        %{customdata[4]}" +
           "<extra></extra>",
 
         showlegend: false,
@@ -167,6 +169,7 @@ export default function SectorsSection() {
     >
       <div className="mx-auto max-w-[1600px] px-6 py-32 md:px-10 md:py-40 lg:px-16">
         {/* Header */}
+
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
           <div className="lg:col-span-3">
             <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-[var(--accent)]">
@@ -194,6 +197,7 @@ export default function SectorsSection() {
         </div>
 
         {/* Sector selector */}
+
         <div className="mt-20 flex flex-col gap-6 border-y border-[var(--border)] py-5 md:flex-row md:items-center md:justify-between">
           <div>
             <div className="font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--muted)]">
@@ -233,6 +237,7 @@ export default function SectorsSection() {
         </div>
 
         {/* Main visualization */}
+
         <div className="relative mt-12 border border-[var(--border)] bg-[var(--surface)]">
           {loading ? (
             <div className="flex min-h-[560px] items-center justify-center">
@@ -304,16 +309,28 @@ export default function SectorsSection() {
                   },
                 },
 
+                /*
+                 * Standardized F1-ML hover treatment.
+                 *
+                 * The visualization itself is unchanged.
+                 * Only the data-point popup is being restyled.
+                 */
                 hoverlabel: {
-                  bgcolor: "#111111",
-                  bordercolor: "#292929",
+                  bgcolor: "#171717",
+                  bordercolor: "#e10600",
+                  align: "left",
 
                   font: {
                     family:
                       "Geist Mono, monospace",
-                    size: 10,
+                    size: 12,
+                    color: "#f2f2f0",
                   },
+
+                  namelength: -1,
                 },
+
+                hovermode: "closest",
 
                 bargap: 0.25,
               }}
@@ -331,6 +348,7 @@ export default function SectorsSection() {
         </div>
 
         {/* Sector statistics */}
+
         <div className="grid grid-cols-1 border-b border-[var(--border)] md:grid-cols-3">
           <SectorStat
             value={
@@ -385,6 +403,7 @@ export default function SectorsSection() {
         </div>
 
         {/* Story */}
+
         <div className="mt-28 grid grid-cols-1 gap-12 lg:grid-cols-12">
           <div className="lg:col-span-3">
             <div className="font-mono text-[9px] uppercase tracking-[0.25em] text-[var(--muted)]">
@@ -413,6 +432,7 @@ export default function SectorsSection() {
         </div>
 
         {/* Next chapter */}
+
         <div className="mt-32 flex items-center gap-4">
           <div className="h-px w-10 bg-[var(--accent)]" />
 
