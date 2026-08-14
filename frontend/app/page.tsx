@@ -717,7 +717,9 @@ function EndSection() {
 
           <div className="flex items-center gap-6">
             <a
-              href="#"
+              href="https://github.com/Rick7118/Formula1-ml"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--muted)] transition-colors hover:text-[var(--foreground)]"
             >
               <span className="mr-2 text-[var(--accent)]">
