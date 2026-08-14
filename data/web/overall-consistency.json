@@ -1,0 +1,86 @@
+[
+  {
+    "driver": "COL",
+    "averageCV": 1.0782137051282477
+  },
+  {
+    "driver": "MAG",
+    "averageCV": 1.1956381634605922
+  },
+  {
+    "driver": "PER",
+    "averageCV": 1.3786665544261938
+  },
+  {
+    "driver": "LEC",
+    "averageCV": 1.3915322499571123
+  },
+  {
+    "driver": "OCO",
+    "averageCV": 1.4341686435106566
+  },
+  {
+    "driver": "GAS",
+    "averageCV": 1.4429033046729327
+  },
+  {
+    "driver": "HUL",
+    "averageCV": 1.4557982833250833
+  },
+  {
+    "driver": "ALB",
+    "averageCV": 1.4601480062678815
+  },
+  {
+    "driver": "RIC",
+    "averageCV": 1.4964196665775846
+  },
+  {
+    "driver": "NOR",
+    "averageCV": 1.4978216491788099
+  },
+  {
+    "driver": "PIA",
+    "averageCV": 1.5042732861799484
+  },
+  {
+    "driver": "SAI",
+    "averageCV": 1.5131497689207234
+  },
+  {
+    "driver": "RUS",
+    "averageCV": 1.5713619685893037
+  },
+  {
+    "driver": "TSU",
+    "averageCV": 1.5791612734005032
+  },
+  {
+    "driver": "ZHO",
+    "averageCV": 1.5846423436620642
+  },
+  {
+    "driver": "ALO",
+    "averageCV": 1.5941627071900952
+  },
+  {
+    "driver": "BOT",
+    "averageCV": 1.6200528330937458
+  },
+  {
+    "driver": "STR",
+    "averageCV": 1.658181817540788
+  },
+  {
+    "driver": "HAM",
+    "averageCV": 1.7782649011971006
+  },
+  {
+    "driver": "VER",
+    "averageCV": 1.9052520636954589
+  },
+  {
+    "driver": "SAR",
+    "averageCV": 2.0654886941426422
+  }
+]

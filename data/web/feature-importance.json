@@ -1,0 +1,210 @@
+[
+  {
+    "model": "bahrain_with_sectors",
+    "features": [
+      {
+        "name": "S2",
+        "importance": 0.800178587436676
+      },
+      {
+        "name": "S1",
+        "importance": 0.15065792202949524
+      },
+      {
+        "name": "S3",
+        "importance": 0.03234017267823219
+      },
+      {
+        "name": "Driver",
+        "importance": 0.005318789277225733
+      },
+      {
+        "name": "SpeedFL",
+        "importance": 0.003902336349710822
+      },
+      {
+        "name": "SpeedST",
+        "importance": 0.0025344649329781532
+      },
+      {
+        "name": "Team",
+        "importance": 0.002324550412595272
+      },
+      {
+        "name": "SpeedI2",
+        "importance": 0.001743082539178431
+      },
+      {
+        "name": "SpeedI1",
+        "importance": 0.0008216708665713668
+      },
+      {
+        "name": "TyreLife",
+        "importance": 0.00017831812147051096
+      },
+      {
+        "name": "Compound",
+        "importance": 0.0
+      },
+      {
+        "name": "FreshTyre",
+        "importance": 0.0
+      }
+    ]
+  },
+  {
+    "model": "bahrain_without_sectors",
+    "features": [
+      {
+        "name": "SpeedI1",
+        "importance": 0.25840938091278076
+      },
+      {
+        "name": "TyreLife",
+        "importance": 0.22544321417808533
+      },
+      {
+        "name": "SpeedFL",
+        "importance": 0.15540193021297455
+      },
+      {
+        "name": "Team",
+        "importance": 0.14827552437782288
+      },
+      {
+        "name": "SpeedST",
+        "importance": 0.08938951790332794
+      },
+      {
+        "name": "SpeedI2",
+        "importance": 0.06387529522180557
+      },
+      {
+        "name": "Driver",
+        "importance": 0.059205178171396255
+      },
+      {
+        "name": "Compound",
+        "importance": 0.0
+      },
+      {
+        "name": "FreshTyre",
+        "importance": 0.0
+      }
+    ]
+  },
+  {
+    "model": "bahrain_combined",
+    "features": [
+      {
+        "name": "S2",
+        "importance": 0.7759726047515869
+      },
+      {
+        "name": "S1",
+        "importance": 0.12398526817560196
+      },
+      {
+        "name": "S3",
+        "importance": 0.08105999231338501
+      },
+      {
+        "name": "Compound",
+        "importance": 0.009085748344659805
+      },
+      {
+        "name": "SpeedI1",
+        "importance": 0.003387518459931016
+      },
+      {
+        "name": "SessionType",
+        "importance": 0.0031222435645759106
+      },
+      {
+        "name": "SpeedI2",
+        "importance": 0.0018618155736476183
+      },
+      {
+        "name": "SpeedST",
+        "importance": 0.0004362748295534402
+      },
+      {
+        "name": "TyreLife",
+        "importance": 0.0003227207635063678
+      },
+      {
+        "name": "SpeedFL",
+        "importance": 0.000304943707305938
+      },
+      {
+        "name": "Team",
+        "importance": 0.00025984476087614894
+      },
+      {
+        "name": "FreshTyre",
+        "importance": 0.0001227432076120749
+      },
+      {
+        "name": "Driver",
+        "importance": 7.827248919056728e-05
+      }
+    ]
+  },
+  {
+    "model": "four_circuit",
+    "features": [
+      {
+        "name": "S1",
+        "importance": 0.7562357187271118
+      },
+      {
+        "name": "S2",
+        "importance": 0.08496905863285065
+      },
+      {
+        "name": "SpeedI2",
+        "importance": 0.06710732728242874
+      },
+      {
+        "name": "S3",
+        "importance": 0.06413102895021439
+      },
+      {
+        "name": "SessionType",
+        "importance": 0.012898975051939487
+      },
+      {
+        "name": "SpeedI1",
+        "importance": 0.004976584576070309
+      },
+      {
+        "name": "SpeedFL",
+        "importance": 0.0037480706814676523
+      },
+      {
+        "name": "TyreLife",
+        "importance": 0.002922078361734748
+      },
+      {
+        "name": "SpeedST",
+        "importance": 0.0009201595676131546
+      },
+      {
+        "name": "FreshTyre",
+        "importance": 0.0008211748208850622
+      },
+      {
+        "name": "Team",
+        "importance": 0.0007198898820206523
+      },
+      {
+        "name": "Compound",
+        "importance": 0.00032426370307803154
+      },
+      {
+        "name": "Driver",
+        "importance": 0.00022569383145309985
+      }
+    ]
+  }
+]

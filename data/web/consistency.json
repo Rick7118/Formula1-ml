@@ -1,0 +1,594 @@
+[
+  {
+    "driver": "ALB",
+    "circuit": "Bahrain",
+    "avgLapTime": 97.53456862745098,
+    "stdLapTime": 1.093771699302959,
+    "lapCount": 51,
+    "cv": 1.1214195281683117
+  },
+  {
+    "driver": "ALB",
+    "circuit": "Monaco",
+    "avgLapTime": 80.06351351351351,
+    "stdLapTime": 1.496798704845985,
+    "lapCount": 74,
+    "cv": 1.869514138413808
+  },
+  {
+    "driver": "ALB",
+    "circuit": "Monza",
+    "avgLapTime": 85.17497999999999,
+    "stdLapTime": 0.7680666023947932,
+    "lapCount": 50,
+    "cv": 0.9017514326329085
+  },
+  {
+    "driver": "ALB",
+    "circuit": "Silverstone",
+    "avgLapTime": 92.29494444444444,
+    "stdLapTime": 1.7978196150487398,
+    "lapCount": 36,
+    "cv": 1.9479069258564974
+  },
+  {
+    "driver": "ALO",
+    "circuit": "Bahrain",
+    "avgLapTime": 96.93990384615384,
+    "stdLapTime": 1.4056937476356122,
+    "lapCount": 52,
+    "cv": 1.4500671981957862
+  },
+  {
+    "driver": "ALO",
+    "circuit": "Monaco",
+    "avgLapTime": 80.44472602739727,
+    "stdLapTime": 1.4500264486119803,
+    "lapCount": 73,
+    "cv": 1.8025127565455827
+  },
+  {
+    "driver": "ALO",
+    "circuit": "Monza",
+    "avgLapTime": 84.74012499999999,
+    "stdLapTime": 1.0359213110878465,
+    "lapCount": 48,
+    "cv": 1.2224684717987453
+  },
+  {
+    "driver": "ALO",
+    "circuit": "Silverstone",
+    "avgLapTime": 92.22591666666666,
+    "stdLapTime": 1.7537702468029945,
+    "lapCount": 36,
+    "cv": 1.9016024022202667
+  },
+  {
+    "driver": "BOT",
+    "circuit": "Bahrain",
+    "avgLapTime": 97.71945098039215,
+    "stdLapTime": 0.9736679991398798,
+    "lapCount": 51,
+    "cv": 0.9963911886234917
+  },
+  {
+    "driver": "BOT",
+    "circuit": "Monaco",
+    "avgLapTime": 80.20115492957747,
+    "stdLapTime": 1.6977131563866097,
+    "lapCount": 71,
+    "cv": 2.1168188386779803
+  },
+  {
+    "driver": "BOT",
+    "circuit": "Monza",
+    "avgLapTime": 86.02402040816325,
+    "stdLapTime": 1.1051340320257539,
+    "lapCount": 49,
+    "cv": 1.2846807517041858
+  },
+  {
+    "driver": "BOT",
+    "circuit": "Silverstone",
+    "avgLapTime": 93.90025,
+    "stdLapTime": 1.9553042054151801,
+    "lapCount": 36,
+    "cv": 2.0823205533693256
+  },
+  {
+    "driver": "COL",
+    "circuit": "Monza",
+    "avgLapTime": 85.37216000000001,
+    "stdLapTime": 0.920494329484016,
+    "lapCount": 50,
+    "cv": 1.0782137051282477
+  },
+  {
+    "driver": "GAS",
+    "circuit": "Bahrain",
+    "avgLapTime": 97.30457142857142,
+    "stdLapTime": 1.3556955164539615,
+    "lapCount": 49,
+    "cv": 1.3932495632531918
+  },
+  {
+    "driver": "GAS",
+    "circuit": "Monaco",
+    "avgLapTime": 80.13801351351351,
+    "stdLapTime": 1.5094844669552787,
+    "lapCount": 74,
+    "cv": 1.8836060450896221
+  },
+  {
+    "driver": "GAS",
+    "circuit": "Monza",
+    "avgLapTime": 85.32393617021276,
+    "stdLapTime": 0.8974834963786116,
+    "lapCount": 47,
+    "cv": 1.0518543056759846
+  },
+  {
+    "driver": "HAM",
+    "circuit": "Bahrain",
+    "avgLapTime": 96.49499999999999,
+    "stdLapTime": 1.1339132829865473,
+    "lapCount": 52,
+    "cv": 1.1751005575279003
+  },
+  {
+    "driver": "HAM",
+    "circuit": "Monaco",
+    "avgLapTime": 78.24489041095892,
+    "stdLapTime": 2.328527327647505,
+    "lapCount": 73,
+    "cv": 2.975948097591524
+  },
+  {
+    "driver": "HAM",
+    "circuit": "Monza",
+    "avgLapTime": 83.89727083333334,
+    "stdLapTime": 1.1834270598307695,
+    "lapCount": 48,
+    "cv": 1.4105668135280753
+  },
+  {
+    "driver": "HAM",
+    "circuit": "Silverstone",
+    "avgLapTime": 91.19557142857143,
+    "stdLapTime": 1.41484834534876,
+    "lapCount": 35,
+    "cv": 1.5514441361409028
+  },
+  {
+    "driver": "HUL",
+    "circuit": "Bahrain",
+    "avgLapTime": 96.85468,
+    "stdLapTime": 1.06707095646093,
+    "lapCount": 50,
+    "cv": 1.1017236920930717
+  },
+  {
+    "driver": "HUL",
+    "circuit": "Monza",
+    "avgLapTime": 85.05774468085106,
+    "stdLapTime": 1.110601804508528,
+    "lapCount": 47,
+    "cv": 1.3057033297504728
+  },
+  {
+    "driver": "HUL",
+    "circuit": "Silverstone",
+    "avgLapTime": 92.28791428571428,
+    "stdLapTime": 1.8088134292537648,
+    "lapCount": 35,
+    "cv": 1.9599678281317061
+  },
+  {
+    "driver": "LEC",
+    "circuit": "Bahrain",
+    "avgLapTime": 96.3683076923077,
+    "stdLapTime": 1.1226105524573957,
+    "lapCount": 52,
+    "cv": 1.1649167442493178
+  },
+  {
+    "driver": "LEC",
+    "circuit": "Monaco",
+    "avgLapTime": 78.35657333333334,
+    "stdLapTime": 1.549236465587583,
+    "lapCount": 75,
+    "cv": 1.9771620933409662
+  },
+  {
+    "driver": "LEC",
+    "circuit": "Monza",
+    "avgLapTime": 83.94936,
+    "stdLapTime": 0.6294293742294218,
+    "lapCount": 50,
+    "cv": 0.7497726894277953
+  },
+  {
+    "driver": "LEC",
+    "circuit": "Silverstone",
+    "avgLapTime": 91.83539999999999,
+    "stdLapTime": 1.5375794142652945,
+    "lapCount": 30,
+    "cv": 1.67427747281037
+  },
+  {
+    "driver": "MAG",
+    "circuit": "Bahrain",
+    "avgLapTime": 97.46507843137255,
+    "stdLapTime": 1.0644837404702172,
+    "lapCount": 51,
+    "cv": 1.0921693775886563
+  },
+  {
+    "driver": "MAG",
+    "circuit": "Monza",
+    "avgLapTime": 84.96264,
+    "stdLapTime": 0.9022232802066971,
+    "lapCount": 50,
+    "cv": 1.0619058920564346
+  },
+  {
+    "driver": "MAG",
+    "circuit": "Silverstone",
+    "avgLapTime": 92.62916216216216,
+    "stdLapTime": 1.327226965299245,
+    "lapCount": 37,
+    "cv": 1.4328392207366856
+  },
+  {
+    "driver": "NOR",
+    "circuit": "Bahrain",
+    "avgLapTime": 96.46351923076924,
+    "stdLapTime": 1.0061341369736565,
+    "lapCount": 52,
+    "cv": 1.0430203511098184
+  },
+  {
+    "driver": "NOR",
+    "circuit": "Monaco",
+    "avgLapTime": 78.44283999999999,
+    "stdLapTime": 1.508709158653661,
+    "lapCount": 75,
+    "cv": 1.9233229682322328
+  },
+  {
+    "driver": "NOR",
+    "circuit": "Monza",
+    "avgLapTime": 83.60760416666666,
+    "stdLapTime": 1.0444247472882997,
+    "lapCount": 48,
+    "cv": 1.2491982729301783
+  },
+  {
+    "driver": "NOR",
+    "circuit": "Silverstone",
+    "avgLapTime": 91.53554285714286,
+    "stdLapTime": 1.6254378295755043,
+    "lapCount": 35,
+    "cv": 1.7757450044430096
+  },
+  {
+    "driver": "OCO",
+    "circuit": "Bahrain",
+    "avgLapTime": 97.81072549019608,
+    "stdLapTime": 0.9346072132919011,
+    "lapCount": 51,
+    "cv": 0.9555263071692277
+  },
+  {
+    "driver": "OCO",
+    "circuit": "Monza",
+    "avgLapTime": 85.76504081632653,
+    "stdLapTime": 0.8264122750173369,
+    "lapCount": 49,
+    "cv": 0.9635770789023146
+  },
+  {
+    "driver": "OCO",
+    "circuit": "Silverstone",
+    "avgLapTime": 93.83963333333332,
+    "stdLapTime": 2.2365762085790015,
+    "lapCount": 30,
+    "cv": 2.383402544460427
+  },
+  {
+    "driver": "PER",
+    "circuit": "Bahrain",
+    "avgLapTime": 96.03984615384616,
+    "stdLapTime": 1.0400726102973654,
+    "lapCount": 52,
+    "cv": 1.0829594714586213
+  },
+  {
+    "driver": "PER",
+    "circuit": "Monza",
+    "avgLapTime": 84.49920833333333,
+    "stdLapTime": 1.013597237530317,
+    "lapCount": 48,
+    "cv": 1.199534596267303
+  },
+  {
+    "driver": "PER",
+    "circuit": "Silverstone",
+    "avgLapTime": 92.50129629629629,
+    "stdLapTime": 1.7145167028105945,
+    "lapCount": 27,
+    "cv": 1.8535055955526574
+  },
+  {
+    "driver": "PIA",
+    "circuit": "Bahrain",
+    "avgLapTime": 96.53767307692307,
+    "stdLapTime": 1.0396363565068045,
+    "lapCount": 52,
+    "cv": 1.0769229497363193
+  },
+  {
+    "driver": "PIA",
+    "circuit": "Monaco",
+    "avgLapTime": 78.43842666666666,
+    "stdLapTime": 1.412019917681018,
+    "lapCount": 75,
+    "cv": 1.800163488339157
+  },
+  {
+    "driver": "PIA",
+    "circuit": "Monza",
+    "avgLapTime": 83.542,
+    "stdLapTime": 0.9514082731023797,
+    "lapCount": 48,
+    "cv": 1.1388382766780538
+  },
+  {
+    "driver": "PIA",
+    "circuit": "Silverstone",
+    "avgLapTime": 91.27572222222221,
+    "stdLapTime": 1.8265809373348119,
+    "lapCount": 36,
+    "cv": 2.0011684299662633
+  },
+  {
+    "driver": "RIC",
+    "circuit": "Bahrain",
+    "avgLapTime": 97.42864705882353,
+    "stdLapTime": 1.2598403045391107,
+    "lapCount": 51,
+    "cv": 1.2930902178888612
+  },
+  {
+    "driver": "RIC",
+    "circuit": "Monaco",
+    "avgLapTime": 80.4444794520548,
+    "stdLapTime": 1.5509071369648724,
+    "lapCount": 73,
+    "cv": 1.9279223975701385
+  },
+  {
+    "driver": "RIC",
+    "circuit": "Monza",
+    "avgLapTime": 85.2385,
+    "stdLapTime": 0.6125542791442764,
+    "lapCount": 50,
+    "cv": 0.7186356859215922
+  },
+  {
+    "driver": "RIC",
+    "circuit": "Silverstone",
+    "avgLapTime": 93.34775,
+    "stdLapTime": 1.9099233099787074,
+    "lapCount": 36,
+    "cv": 2.046030364929746
+  },
+  {
+    "driver": "RUS",
+    "circuit": "Bahrain",
+    "avgLapTime": 96.47413461538461,
+    "stdLapTime": 0.8860203828232707,
+    "lapCount": 52,
+    "cv": 0.9184020010706352
+  },
+  {
+    "driver": "RUS",
+    "circuit": "Monaco",
+    "avgLapTime": 78.49991999999999,
+    "stdLapTime": 1.9704914242322815,
+    "lapCount": 75,
+    "cv": 2.510182716405675
+  },
+  {
+    "driver": "RUS",
+    "circuit": "Monza",
+    "avgLapTime": 83.98366666666666,
+    "stdLapTime": 1.1752785153539116,
+    "lapCount": 48,
+    "cv": 1.3994131978288378
+  },
+  {
+    "driver": "RUS",
+    "circuit": "Silverstone",
+    "avgLapTime": 92.15972727272727,
+    "stdLapTime": 1.3431819073988598,
+    "lapCount": 22,
+    "cv": 1.4574499590520666
+  },
+  {
+    "driver": "SAI",
+    "circuit": "Bahrain",
+    "avgLapTime": 96.10307692307691,
+    "stdLapTime": 1.063609095341097,
+    "lapCount": 52,
+    "cv": 1.1067378167219704
+  },
+  {
+    "driver": "SAI",
+    "circuit": "Monaco",
+    "avgLapTime": 78.43656,
+    "stdLapTime": 1.6002617880428942,
+    "lapCount": 75,
+    "cv": 2.0401988410033463
+  },
+  {
+    "driver": "SAI",
+    "circuit": "Monza",
+    "avgLapTime": 84.23608,
+    "stdLapTime": 0.7830349339302244,
+    "lapCount": 50,
+    "cv": 0.9295719054474334
+  },
+  {
+    "driver": "SAI",
+    "circuit": "Silverstone",
+    "avgLapTime": 91.82493939393939,
+    "stdLapTime": 1.8145439154818257,
+    "lapCount": 33,
+    "cv": 1.9760905125101438
+  },
+  {
+    "driver": "SAR",
+    "circuit": "Bahrain",
+    "avgLapTime": 97.56464583333333,
+    "stdLapTime": 1.6831925907123764,
+    "lapCount": 48,
+    "cv": 1.725207503533321
+  },
+  {
+    "driver": "SAR",
+    "circuit": "Monaco",
+    "avgLapTime": 80.26556338028169,
+    "stdLapTime": 2.214885206521625,
+    "lapCount": 71,
+    "cv": 2.7594464092003634
+  },
+  {
+    "driver": "SAR",
+    "circuit": "Silverstone",
+    "avgLapTime": 92.64122222222221,
+    "stdLapTime": 1.585843716153487,
+    "lapCount": 36,
+    "cv": 1.7118121696942428
+  },
+  {
+    "driver": "STR",
+    "circuit": "Bahrain",
+    "avgLapTime": 97.12436538461537,
+    "stdLapTime": 0.9257145417978087,
+    "lapCount": 52,
+    "cv": 0.9531228730627496
+  },
+  {
+    "driver": "STR",
+    "circuit": "Monaco",
+    "avgLapTime": 79.82127536231883,
+    "stdLapTime": 1.6808412099483254,
+    "lapCount": 69,
+    "cv": 2.1057558931735625
+  },
+  {
+    "driver": "STR",
+    "circuit": "Monza",
+    "avgLapTime": 85.27031111111111,
+    "stdLapTime": 1.2376346358756958,
+    "lapCount": 45,
+    "cv": 1.4514250267751472
+  },
+  {
+    "driver": "STR",
+    "circuit": "Silverstone",
+    "avgLapTime": 92.23594285714285,
+    "stdLapTime": 1.9576373055722198,
+    "lapCount": 35,
+    "cv": 2.122423477151693
+  },
+  {
+    "driver": "TSU",
+    "circuit": "Bahrain",
+    "avgLapTime": 97.48550980392157,
+    "stdLapTime": 0.9152477997252717,
+    "lapCount": 51,
+    "cv": 0.9388552222439666
+  },
+  {
+    "driver": "TSU",
+    "circuit": "Monaco",
+    "avgLapTime": 79.79208219178082,
+    "stdLapTime": 1.7837523709664684,
+    "lapCount": 73,
+    "cv": 2.2355004681782926
+  },
+  {
+    "driver": "TSU",
+    "circuit": "Silverstone",
+    "avgLapTime": 92.65255555555557,
+    "stdLapTime": 1.4482781588482363,
+    "lapCount": 36,
+    "cv": 1.5631281297792499
+  },
+  {
+    "driver": "VER",
+    "circuit": "Bahrain",
+    "avgLapTime": 95.65440384615385,
+    "stdLapTime": 1.0666443305188675,
+    "lapCount": 52,
+    "cv": 1.1151021674176227
+  },
+  {
+    "driver": "VER",
+    "circuit": "Monaco",
+    "avgLapTime": 78.28283561643836,
+    "stdLapTime": 2.2318808337221068,
+    "lapCount": 73,
+    "cv": 2.851047507601323
+  },
+  {
+    "driver": "VER",
+    "circuit": "Monza",
+    "avgLapTime": 84.124375,
+    "stdLapTime": 1.1212629775809244,
+    "lapCount": 48,
+    "cv": 1.3328633675803527
+  },
+  {
+    "driver": "VER",
+    "circuit": "Silverstone",
+    "avgLapTime": 91.55874999999999,
+    "stdLapTime": 2.1259897913341783,
+    "lapCount": 36,
+    "cv": 2.321995212182537
+  },
+  {
+    "driver": "ZHO",
+    "circuit": "Bahrain",
+    "avgLapTime": 97.40729411764706,
+    "stdLapTime": 0.8753538780200257,
+    "lapCount": 51,
+    "cv": 0.8986533153901047
+  },
+  {
+    "driver": "ZHO",
+    "circuit": "Monaco",
+    "avgLapTime": 80.78649295774649,
+    "stdLapTime": 1.6764645611970774,
+    "lapCount": 71,
+    "cv": 2.075179277894776
+  },
+  {
+    "driver": "ZHO",
+    "circuit": "Monza",
+    "avgLapTime": 86.18110204081633,
+    "stdLapTime": 0.8510993685839969,
+    "lapCount": 49,
+    "cv": 0.9875707648538851
+  },
+  {
+    "driver": "ZHO",
+    "circuit": "Silverstone",
+    "avgLapTime": 93.43003703703704,
+    "stdLapTime": 2.2209870896566763,
+    "lapCount": 27,
+    "cv": 2.377166016509492
+  }
+]

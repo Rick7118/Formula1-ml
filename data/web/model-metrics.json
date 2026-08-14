@@ -1,0 +1,77 @@
+{
+  "bahrain_qualifying_with_sectors": {
+    "model": "XGBoost",
+    "mae": 0.13632263901654587,
+    "r2": 0.932365303610331,
+    "features": [
+      "Driver",
+      "Team",
+      "Compound",
+      "TyreLife",
+      "FreshTyre",
+      "S1",
+      "S2",
+      "S3",
+      "SpeedI1",
+      "SpeedI2",
+      "SpeedFL",
+      "SpeedST"
+    ]
+  },
+  "bahrain_qualifying_without_sectors": {
+    "model": "XGBoost",
+    "mae": 0.3342252197265631,
+    "r2": 0.7122368944958177,
+    "features": [
+      "Driver",
+      "Team",
+      "Compound",
+      "TyreLife",
+      "FreshTyre",
+      "SpeedI1",
+      "SpeedI2",
+      "SpeedFL",
+      "SpeedST"
+    ]
+  },
+  "bahrain_combined": {
+    "model": "XGBoost",
+    "mae": 0.06901587573901947,
+    "r2": 0.9978138074490325,
+    "features": [
+      "Driver",
+      "Team",
+      "Compound",
+      "TyreLife",
+      "FreshTyre",
+      "S1",
+      "S2",
+      "S3",
+      "SpeedI1",
+      "SpeedI2",
+      "SpeedFL",
+      "SpeedST",
+      "SessionType"
+    ]
+  },
+  "four_circuit": {
+    "model": "XGBoost",
+    "mae": 0.22082101490349398,
+    "r2": 0.9948005600978728,
+    "features": [
+      "Driver",
+      "Team",
+      "Compound",
+      "TyreLife",
+      "FreshTyre",
+      "S1",
+      "S2",
+      "S3",
+      "SpeedI1",
+      "SpeedI2",
+      "SpeedFL",
+      "SpeedST",
+      "SessionType"
+    ]
+  }
+}

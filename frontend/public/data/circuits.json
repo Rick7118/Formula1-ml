@@ -1,0 +1,38 @@
+[
+  {
+    "id": "bahrain",
+    "name": "Bahrain",
+    "year": 2024,
+    "sessions": [
+      "Q",
+      "R"
+    ]
+  },
+  {
+    "id": "monaco",
+    "name": "Monaco",
+    "year": 2024,
+    "sessions": [
+      "Q",
+      "R"
+    ]
+  },
+  {
+    "id": "monza",
+    "name": "Monza",
+    "year": 2024,
+    "sessions": [
+      "Q",
+      "R"
+    ]
+  },
+  {
+    "id": "silverstone",
+    "name": "Silverstone",
+    "year": 2024,
+    "sessions": [
+      "Q",
+      "R"
+    ]
+  }
+]

@@ -1,0 +1,172 @@
+[
+  {
+    "model": "with_sectors",
+    "actual": 91.128,
+    "predicted": 91.01376342773438
+  },
+  {
+    "model": "with_sectors",
+    "actual": 90.031,
+    "predicted": 89.92826080322266
+  },
+  {
+    "model": "with_sectors",
+    "actual": 90.278,
+    "predicted": 90.32308197021484
+  },
+  {
+    "model": "with_sectors",
+    "actual": 90.221,
+    "predicted": 89.97762298583984
+  },
+  {
+    "model": "with_sectors",
+    "actual": 90.698,
+    "predicted": 90.95326232910156
+  },
+  {
+    "model": "with_sectors",
+    "actual": 92.434,
+    "predicted": 91.85299682617188
+  },
+  {
+    "model": "with_sectors",
+    "actual": 89.407,
+    "predicted": 89.51200103759766
+  },
+  {
+    "model": "with_sectors",
+    "actual": 90.425,
+    "predicted": 90.45553588867188
+  },
+  {
+    "model": "with_sectors",
+    "actual": 89.179,
+    "predicted": 89.42147064208984
+  },
+  {
+    "model": "with_sectors",
+    "actual": 90.562,
+    "predicted": 90.5064468383789
+  },
+  {
+    "model": "with_sectors",
+    "actual": 89.683,
+    "predicted": 89.60743713378906
+  },
+  {
+    "model": "with_sectors",
+    "actual": 90.623,
+    "predicted": 90.4627685546875
+  },
+  {
+    "model": "with_sectors",
+    "actual": 90.692,
+    "predicted": 90.65860748291016
+  },
+  {
+    "model": "with_sectors",
+    "actual": 90.529,
+    "predicted": 90.62263488769531
+  },
+  {
+    "model": "with_sectors",
+    "actual": 91.102,
+    "predicted": 90.99686431884766
+  },
+  {
+    "model": "with_sectors",
+    "actual": 90.481,
+    "predicted": 90.50489807128906
+  },
+  {
+    "model": "with_sectors",
+    "actual": 89.679,
+    "predicted": 89.62863159179688
+  },
+  {
+    "model": "without_sectors",
+    "actual": 91.128,
+    "predicted": 90.43924713134766
+  },
+  {
+    "model": "without_sectors",
+    "actual": 90.031,
+    "predicted": 89.99854278564453
+  },
+  {
+    "model": "without_sectors",
+    "actual": 90.278,
+    "predicted": 90.02664184570312
+  },
+  {
+    "model": "without_sectors",
+    "actual": 90.221,
+    "predicted": 90.36811065673828
+  },
+  {
+    "model": "without_sectors",
+    "actual": 90.698,
+    "predicted": 91.0179214477539
+  },
+  {
+    "model": "without_sectors",
+    "actual": 92.434,
+    "predicted": 91.94436645507812
+  },
+  {
+    "model": "without_sectors",
+    "actual": 89.407,
+    "predicted": 89.82891082763672
+  },
+  {
+    "model": "without_sectors",
+    "actual": 90.425,
+    "predicted": 90.1903305053711
+  },
+  {
+    "model": "without_sectors",
+    "actual": 89.179,
+    "predicted": 89.36357879638672
+  },
+  {
+    "model": "without_sectors",
+    "actual": 90.562,
+    "predicted": 90.13633728027344
+  },
+  {
+    "model": "without_sectors",
+    "actual": 89.683,
+    "predicted": 90.09823608398438
+  },
+  {
+    "model": "without_sectors",
+    "actual": 90.623,
+    "predicted": 90.45211791992188
+  },
+  {
+    "model": "without_sectors",
+    "actual": 90.692,
+    "predicted": 89.86811065673828
+  },
+  {
+    "model": "without_sectors",
+    "actual": 90.529,
+    "predicted": 90.5688705444336
+  },
+  {
+    "model": "without_sectors",
+    "actual": 91.102,
+    "predicted": 90.79373168945312
+  },
+  {
+    "model": "without_sectors",
+    "actual": 90.481,
+    "predicted": 90.71815490722656
+  },
+  {
+    "model": "without_sectors",
+    "actual": 89.679,
+    "predicted": 90.16947174072266
+  }
+]
